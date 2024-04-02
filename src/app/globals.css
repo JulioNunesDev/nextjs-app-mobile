@@ -2,6 +2,28 @@
 @tailwind components;
 @tailwind utilities;
 
+*{
+box-sizing: border-box;
+margin: 0;
+padding: 0;
+user-select: none;
+
+
+}
+
+::-moz-selection { /* Code for Firefox */
+  color: rgb(55, 69, 176);
+  user-select: none;
+  
+}
+
+::selection {
+  color: rgb(55, 69, 176);
+  user-select: none;
+  
+ 
+}
+
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
@@ -17,13 +39,9 @@
 }
 
 body {
+  overflow: hidden;
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  background: rgb(11, 11, 11)
 }
 
 @layer utilities {
